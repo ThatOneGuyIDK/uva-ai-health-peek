@@ -64,7 +64,8 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">Medical Monitoring <Eye className="h-5 w-5 text-accent" />
+                <CardTitle className="flex items-center gap-2">
+                  <Eye className="h-5 w-5 text-accent" />
                   Medical Imaging
                 </CardTitle>
               </CardHeader>
