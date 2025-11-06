@@ -8,40 +8,40 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 215 25% 15%;
+    --background: 0 0% 98%;
+    --foreground: 225 36% 22%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 225 36% 22%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 225 36% 22%;
 
-    --primary: 210 100% 45%;
+    --primary: 225 36% 22%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 15% 92%;
-    --secondary-foreground: 215 25% 15%;
+    --secondary: 225 20% 95%;
+    --secondary-foreground: 225 36% 22%;
 
-    --muted: 210 15% 95%;
-    --muted-foreground: 215 15% 45%;
+    --muted: 225 15% 96%;
+    --muted-foreground: 225 20% 50%;
 
-    --accent: 150 60% 45%;
+    --accent: 30 100% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 88%;
-    --input: 210 20% 88%;
-    --ring: 210 100% 45%;
+    --border: 225 20% 88%;
+    --input: 225 20% 88%;
+    --ring: 225 36% 22%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
     
     --success: 150 60% 45%;
     --success-foreground: 0 0% 100%;
     
-    --info: 210 100% 45%;
+    --info: 210 100% 50%;
     --info-foreground: 0 0% 100%;
 
     --sidebar-background: 0 0% 98%;
@@ -62,33 +62,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 215 30% 8%;
-    --foreground: 210 20% 95%;
+    --background: 225 30% 12%;
+    --foreground: 0 0% 95%;
 
-    --card: 215 25% 12%;
-    --card-foreground: 210 20% 95%;
+    --card: 225 28% 16%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 215 25% 12%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 225 28% 16%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 210 100% 55%;
+    --primary: 225 36% 22%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 215 20% 18%;
-    --secondary-foreground: 210 20% 95%;
+    --secondary: 225 25% 20%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 215 20% 18%;
-    --muted-foreground: 215 15% 60%;
+    --muted: 225 25% 20%;
+    --muted-foreground: 225 15% 65%;
 
-    --accent: 150 60% 50%;
+    --accent: 30 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 50.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 20% 20%;
-    --input: 215 20% 20%;
-    --ring: 210 100% 55%;
+    --border: 225 20% 25%;
+    --input: 225 20% 25%;
+    --ring: 225 36% 22%;
     
     --success: 150 60% 50%;
     --success-foreground: 0 0% 100%;
@@ -114,5 +114,6 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 }
