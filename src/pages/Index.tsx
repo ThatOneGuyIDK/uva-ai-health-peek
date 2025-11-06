@@ -71,7 +71,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  AI tools like RAMP (Rothman Index Monitoring Platform) provide early warnings about potential patient health changes. RAMP works alongside your care team—it doesn't replace their continuous monitoring and expertise.
+                  RAMP (Real-Time Analytics Monitoring Platform) uses AI to analyze your health data and alert your care team if you may need attention. Your nurses and doctors are always monitoring you—RAMP simply helps them spot important changes faster.
                 </p>
               </CardContent>
             </Card>
