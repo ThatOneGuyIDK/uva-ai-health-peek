@@ -65,13 +65,13 @@ const Index = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Eye className="h-5 w-5 text-accent" />
-                  Medical Imaging
+                  <HeartPulse className="h-5 w-5 text-accent" />
+                  Medical Monitoring
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  AI helps radiologists detect patterns in X-rays, CT scans, and MRIs, making it easier to identify potential issues quickly and accurately.
+                  AI tools like RAMP (Rothman Index Monitoring Platform) provide early warnings about potential patient health changes. RAMP works alongside your care team—it doesn't replace their continuous monitoring and expertise.
                 </p>
               </CardContent>
             </Card>
