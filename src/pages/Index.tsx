@@ -4,40 +4,30 @@ import { Separator } from "@/components/ui/separator";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Brain, Shield, Users, FileText, ChevronDown, CheckCircle2, Lock, Eye, HeartPulse } from "lucide-react";
 import { useState } from "react";
-
 const Index = () => {
   const [openFaq, setOpenFaq] = useState<string | null>(null);
-
-  const faqs = [
-    {
-      id: "replace",
-      question: "Does AI replace my doctor?",
-      answer: "No. AI is a tool that helps your clinicians work more efficiently and accurately. Your doctor always reviews AI recommendations and makes the final decisions about your care. AI supports human expertise—it doesn't replace it."
-    },
-    {
-      id: "opt-out",
-      question: "Can I opt out of AI-based tools?",
-      answer: "Yes. You have the right to discuss AI use in your care with your provider. While some AI tools are integrated into standard clinical workflows, we respect your preferences and will work with you to address any concerns you may have."
-    },
-    {
-      id: "privacy",
-      question: "How is my privacy protected?",
-      answer: "UVA Health follows strict HIPAA regulations and uses advanced security measures including data encryption, de-identification, and controlled access. Your data is never shared with third parties or used to train commercial AI models without your explicit consent."
-    },
-    {
-      id: "know",
-      question: "Will I know when AI is used in my care?",
-      answer: "Yes. We're committed to transparency. Your care team can inform you when AI tools have been used to support clinical decisions, and you can always request more information about AI's role in your treatment."
-    },
-    {
-      id: "accuracy",
-      question: "How accurate is the AI?",
-      answer: "Our AI tools undergo rigorous testing and validation before use. They're continuously monitored for accuracy and are only used in situations where they've proven to enhance clinical outcomes. All AI outputs are reviewed by licensed medical professionals."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background font-sans">
+  const faqs = [{
+    id: "replace",
+    question: "Does AI replace my doctor?",
+    answer: "No. AI is a tool that helps your clinicians work more efficiently and accurately. Your doctor always reviews AI recommendations and makes the final decisions about your care. AI supports human expertise—it doesn't replace it."
+  }, {
+    id: "opt-out",
+    question: "Can I opt out of AI-based tools?",
+    answer: "Yes. You have the right to discuss AI use in your care with your provider. While some AI tools are integrated into standard clinical workflows, we respect your preferences and will work with you to address any concerns you may have."
+  }, {
+    id: "privacy",
+    question: "How is my privacy protected?",
+    answer: "UVA Health follows strict HIPAA regulations and uses advanced security measures including data encryption, de-identification, and controlled access. Your data is never shared with third parties or used to train commercial AI models without your explicit consent."
+  }, {
+    id: "know",
+    question: "Will I know when AI is used in my care?",
+    answer: "Yes. We're committed to transparency. Your care team can inform you when AI tools have been used to support clinical decisions, and you can always request more information about AI's role in your treatment."
+  }, {
+    id: "accuracy",
+    question: "How accurate is the AI?",
+    answer: "Our AI tools undergo rigorous testing and validation before use. They're continuously monitored for accuracy and are only used in situations where they've proven to enhance clinical outcomes. All AI outputs are reviewed by licensed medical professionals."
+  }];
+  return <div className="min-h-screen bg-background font-sans">
       {/* Header */}
       <header className="bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 py-8">
@@ -57,9 +47,7 @@ const Index = () => {
               <p className="text-lg leading-relaxed text-foreground mb-4">
                 UVA Health uses artificial intelligence (AI) tools to help our clinicians provide faster, safer, and more personalized care. AI enhances the expertise of our healthcare team—it never replaces human judgment or compassion.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
-                This page explains how we use AI, how we protect your information, and your rights as a patient. We believe in transparency and want you to feel informed and confident about the technology that supports your care.
-              </p>
+              <p className="text-muted-foreground leading-relaxed">This page explains how we use AI, how we protect your information, and your rights as a patient. UVA Health believes in transparency and wants you to feel informed and confident about the technology that supports your care.</p>
             </CardContent>
           </Card>
         </section>
@@ -76,8 +64,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Eye className="h-5 w-5 text-accent" />
+                <CardTitle className="flex items-center gap-2">Medical Monitoring <Eye className="h-5 w-5 text-accent" />
                   Medical Imaging
                 </CardTitle>
               </CardHeader>
@@ -215,7 +202,7 @@ const Index = () => {
             <div className="p-2 rounded-lg bg-primary/10">
               <Users className="h-6 w-6 text-primary" />
             </div>
-            <h2 className="text-3xl font-bold text-foreground">How AI Supports Clinicians, Not Replaces Them</h2>
+            <h2 className="text-3xl font-bold text-foreground">AI Supports Medical Staff, Not Replaces Them</h2>
           </div>
 
           <Card>
@@ -228,7 +215,7 @@ const Index = () => {
                 <div className="flex gap-4">
                   <Badge variant="secondary" className="h-8 w-8 rounded-full flex items-center justify-center flex-shrink-0">1</Badge>
                   <div>
-                    <p className="font-semibold text-foreground mb-1">AI assists, providers decide</p>
+                    <p className="font-semibold text-foreground mb-1">AI assists in letting providers decide</p>
                     <p className="text-muted-foreground">AI offers insights and recommendations, but your doctor reviews all information and makes the final clinical decisions.</p>
                   </div>
                 </div>
@@ -236,7 +223,7 @@ const Index = () => {
                 <div className="flex gap-4">
                   <Badge variant="secondary" className="h-8 w-8 rounded-full flex items-center justify-center flex-shrink-0">2</Badge>
                   <div>
-                    <p className="font-semibold text-foreground mb-1">Continuous oversight</p>
+                    <p className="font-semibold text-foreground mb-1">AI always has continuous human oversight</p>
                     <p className="text-muted-foreground">Medical experts regularly review AI performance to ensure accuracy, safety, and effectiveness.</p>
                   </div>
                 </div>
@@ -244,7 +231,7 @@ const Index = () => {
                 <div className="flex gap-4">
                   <Badge variant="secondary" className="h-8 w-8 rounded-full flex items-center justify-center flex-shrink-0">3</Badge>
                   <div>
-                    <p className="font-semibold text-foreground mb-1">Patient-first care</p>
+                    <p className="font-semibold text-foreground mb-1">UVA priotitizes Patient-first care</p>
                     <p className="text-muted-foreground">Your relationship with your care team remains personal, compassionate, and centered on your individual needs.</p>
                   </div>
                 </div>
@@ -311,21 +298,13 @@ const Index = () => {
           <h2 className="text-3xl font-bold text-foreground mb-6">Frequently Asked Questions</h2>
           
           <div className="space-y-3">
-            {faqs.map((faq) => (
-              <Card key={faq.id}>
-                <Collapsible
-                  open={openFaq === faq.id}
-                  onOpenChange={() => setOpenFaq(openFaq === faq.id ? null : faq.id)}
-                >
+            {faqs.map(faq => <Card key={faq.id}>
+                <Collapsible open={openFaq === faq.id} onOpenChange={() => setOpenFaq(openFaq === faq.id ? null : faq.id)}>
                   <CollapsibleTrigger className="w-full">
                     <CardHeader className="hover:bg-muted/50 transition-colors">
                       <div className="flex items-center justify-between">
                         <CardTitle className="text-lg text-left">{faq.question}</CardTitle>
-                        <ChevronDown 
-                          className={`h-5 w-5 text-muted-foreground transition-transform ${
-                            openFaq === faq.id ? 'transform rotate-180' : ''
-                          }`}
-                        />
+                        <ChevronDown className={`h-5 w-5 text-muted-foreground transition-transform ${openFaq === faq.id ? 'transform rotate-180' : ''}`} />
                       </div>
                     </CardHeader>
                   </CollapsibleTrigger>
@@ -335,8 +314,7 @@ const Index = () => {
                     </CardContent>
                   </CollapsibleContent>
                 </Collapsible>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </section>
 
@@ -349,8 +327,6 @@ const Index = () => {
           </CardContent>
         </Card>
       </main>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
