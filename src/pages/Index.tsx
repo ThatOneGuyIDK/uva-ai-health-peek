@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Brain, Shield, Users, FileText, ChevronDown, CheckCircle2, Lock, Eye, HeartPulse } from "lucide-react";
@@ -32,7 +33,14 @@ const Index = () => {
       <header className="bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-4xl">
-            <h1 className="text-4xl font-bold mb-2">UVA Health and Artificial Intelligence (AI)</h1>
+            <div className="flex items-start justify-between mb-2">
+              <h1 className="text-4xl font-bold">UVA Health and Artificial Intelligence (AI)</h1>
+              <Button asChild className="bg-accent hover:bg-accent/90 text-white">
+                <a href="https://mychart.uvahealth.com" target="_blank" rel="noopener noreferrer">
+                  MyChart
+                </a>
+              </Button>
+            </div>
             <p className="text-lg opacity-90">Understanding how AI supports your care</p>
           </div>
         </div>
