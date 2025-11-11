@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Brain, Shield, Users, FileText, ChevronDown, CheckCircle2, Lock, Eye, HeartPulse } from "lucide-react";
+import { Brain, Shield, Users, FileText, ChevronDown, CheckCircle2, Lock, Eye, HeartPulse, Heart } from "lucide-react";
 import { useState } from "react";
 const Index = () => {
   const [openFaq, setOpenFaq] = useState<string | null>(null);
@@ -35,8 +35,11 @@ const Index = () => {
           <div className="max-w-4xl">
             <div className="flex items-start justify-between mb-2">
               <h1 className="text-4xl font-bold">UVA Health and Artificial Intelligence (AI)</h1>
-              <Button asChild className="bg-accent hover:bg-accent/90 text-white">
-                <a href="https://mychart.uvahealth.com" target="_blank" rel="noopener noreferrer">
+              <Button asChild className="bg-accent hover:bg-accent/90 text-white font-semibold px-6 shadow-lg">
+                <a href="https://mychart.uvahealth.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <div className="bg-white/20 p-1.5 rounded">
+                    <Heart className="h-4 w-4 fill-white" />
+                  </div>
                   MyChart
                 </a>
               </Button>
