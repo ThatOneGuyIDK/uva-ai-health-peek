@@ -10,23 +10,23 @@ const Index = () => {
   const faqs = [{
     id: "replace",
     question: "Does AI replace my doctor?",
-    answer: "No. AI is a tool that helps your clinicians work more efficiently and accurately. Your doctor always reviews AI recommendations and makes the final decisions about your care. AI supports human expertise—it doesn't replace it."
+    answer: "No. AI tools like RAMP and DAX Copilot help your clinicians work more efficiently and accurately. Your doctor always reviews AI recommendations and makes the final decisions about your care. AI supports human expertise—it doesn't replace it."
   }, {
     id: "opt-out",
     question: "Can I opt out of AI-based tools?",
-    answer: "Yes. You have the right to discuss AI use in your care with your provider. While some AI tools are integrated into standard clinical workflows, we respect your preferences and will work with you to address any concerns you may have."
+    answer: "Yes. For tools like DAX Copilot (AI note-taking), your provider will only use it if you're comfortable with it, and you can ask them to stop at any time. While some AI tools like RAMP are integrated into standard monitoring workflows to ensure patient safety, we respect your preferences and will discuss any concerns with you."
   }, {
     id: "privacy",
-    question: "How is my privacy protected?",
-    answer: "UVA Health follows strict HIPAA regulations and uses advanced security measures including data encryption, de-identification, and controlled access. Your data is never shared with third parties or used to train commercial AI models without your explicit consent."
+    question: "How is my privacy protected with DAX Copilot?",
+    answer: "DAX Copilot recordings are hosted on Microsoft Azure cloud, which is HITRUST certified for healthcare security. Recordings are stored securely for one year and then automatically deleted. UVA Health follows strict HIPAA regulations and your data is never shared with third parties without your explicit consent."
   }, {
     id: "know",
-    question: "Will I know when AI is used in my care?",
-    answer: "Yes. We're committed to transparency. Your care team can inform you when AI tools have been used to support clinical decisions, and you can always request more information about AI's role in your treatment."
+    question: "What is RAMP and how does it work?",
+    answer: "RAMP (Real-Time Analytics Monitoring Platform) is UVA Health's custom-developed AI system that continuously analyzes patient data from EHRs and bedside monitors. It uses machine learning to detect early signs of clinical deterioration and alerts care teams in real-time, allowing for faster intervention and improved patient outcomes."
   }, {
     id: "accuracy",
     question: "How accurate is the AI?",
-    answer: "Our AI tools undergo rigorous testing and validation before use. They're continuously monitored for accuracy and are only used in situations where they've proven to enhance clinical outcomes. All AI outputs are reviewed by licensed medical professionals."
+    answer: "Our AI tools undergo rigorous testing and validation. RAMP was developed in-house by UVA Health's data science team with close collaboration from clinicians to ensure transparency, explainability, and accuracy. All AI systems are continuously monitored and all outputs are reviewed by licensed medical professionals."
   }];
   return <div className="min-h-screen bg-background font-sans">
       {/* Header */}
@@ -34,7 +34,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-4xl">
             <div className="flex items-start justify-between mb-2">
-              <h1 className="text-4xl font-bold">UVA Health and Artificial Intelligence (AI)</h1>
+              <h1 className="text-4xl font-bold">UVA Health AI Technologies: RAMP, IMPACT Pro & DAX Copilot</h1>
               <Button asChild className="bg-accent hover:bg-accent/90 text-white font-semibold px-6 shadow-lg">
                 <a href="https://mychart.uvahealth.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <div className="bg-white/20 p-1.5 rounded">
@@ -44,7 +44,7 @@ const Index = () => {
                 </a>
               </Button>
             </div>
-            <p className="text-lg opacity-90">Understanding how AI supports your care</p>
+            <p className="text-lg opacity-90">Understanding how our AI systems support your care at UVA Health</p>
           </div>
         </div>
       </header>
@@ -56,9 +56,9 @@ const Index = () => {
           <Card className="border-l-4 border-l-accent">
             <CardContent className="pt-6">
               <p className="text-lg leading-relaxed text-foreground mb-4">
-                UVA Health uses artificial intelligence (AI) tools to help our clinicians provide faster, safer, and more personalized care. AI enhances the expertise of our healthcare team—it never replaces human judgment or compassion.
+                UVA Health uses advanced artificial intelligence (AI) technologies—including RAMP (Real-Time Analytics Monitoring Platform), IMPACT Pro predictive monitoring, DAX Copilot for clinical documentation, and CoMet for disease prediction—to help our clinicians provide faster, safer, and more personalized care. These AI tools enhance the expertise of our healthcare team and never replace human judgment or compassion.
               </p>
-              <p className="text-muted-foreground leading-relaxed">This page explains how we use AI, how we protect your information, and your rights as a patient. UVA Health believes in transparency and wants you to feel informed and confident about the technology that supports your care.</p>
+              <p className="text-muted-foreground leading-relaxed">This page explains how we use AI at UVA Health, how we protect your information, and your rights as a patient. We believe in transparency and want you to feel informed and confident about the technology that supports your care.</p>
             </CardContent>
           </Card>
         </section>
@@ -69,7 +69,7 @@ const Index = () => {
             <div className="p-2 rounded-lg bg-accent/10">
               <Brain className="h-6 w-6 text-accent" />
             </div>
-            <h2 className="text-3xl font-bold text-foreground">How AI Is Used in Your Care</h2>
+            <h2 className="text-3xl font-bold text-foreground">UVA Health's AI Technologies in Action</h2>
           </div>
           
           <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -77,11 +77,16 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <HeartPulse className="h-5 w-5 text-accent" />
-                  Medical Monitoring
+                  RAMP: Real-Time Monitoring
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">RAMP (Real-Time Analytics Monitoring Platform) uses AI to analyze your health data and alert your care team if you may need attention. Your nurses and doctors are always monitoring you. RAMP simply helps them spot important changes faster.</p>
+                <p className="text-muted-foreground mb-3">
+                  <strong>RAMP (Real-Time Analytics Monitoring Platform)</strong> is UVA Health's custom-developed AI system that continuously analyzes patient data from electronic health records and bedside monitors. Using advanced machine learning, RAMP provides actionable, explainable predictions that help care teams identify patients on the verge of clinical deterioration.
+                </p>
+                <p className="text-muted-foreground text-sm">
+                  RAMP integrates real-time vitals, EKG waveforms via Kafka streaming, and historical patient data to alert providers when immediate attention is needed, facilitating faster delivery of necessary care and improving patient outcomes.
+                </p>
               </CardContent>
             </Card>
 
@@ -89,12 +94,12 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <HeartPulse className="h-5 w-5 text-accent" />
-                  Diagnostic Support
+                  IMPACT Pro: Cardiac Monitoring
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  AI analyzes symptoms and medical history to help clinicians identify potential conditions and recommend appropriate tests.
+                  <strong>IMPACT Pro</strong> (Predictive Monitoring: IMPact of Real-Time Predictive Monitoring in Acute Care Cardiology) uses AI-powered risk-prediction algorithms to identify cardiac patients at risk of deterioration. This technology enables faster intervention through enhanced data visualizations and early detection alerts to care teams.
                 </p>
               </CardContent>
             </Card>
@@ -103,12 +108,15 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <FileText className="h-5 w-5 text-accent" />
-                  Clinical Documentation
+                  DAX Copilot: AI Note-Taking
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  AI assists with summarizing clinical notes and medical records, giving providers more time to focus on patient care.
+                <p className="text-muted-foreground mb-3">
+                  <strong>DAX Copilot</strong> uses ambient listening technology to securely record conversations between you and your provider during appointments. The AI then generates medical notes for your provider to review, giving them more time to focus on you instead of typing on a computer.
+                </p>
+                <p className="text-muted-foreground text-sm">
+                  Your provider will only use DAX Copilot if you're comfortable with it. You can see these notes in your MyChart after your visit. Recordings are stored securely on HITRUST-certified Microsoft Azure cloud and deleted after one year.
                 </p>
               </CardContent>
             </Card>
@@ -116,13 +124,13 @@ const Index = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Shield className="h-5 w-5 text-accent" />
-                  Safety Checks
+                  <Brain className="h-5 w-5 text-accent" />
+                  CoMet: Disease Prediction
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  AI reviews medications for potential interactions and alerts providers to safety concerns before prescriptions are finalized.
+                  <strong>CoMet</strong> is an advanced deep learning model that combines patient proteomic data with electronic health records to enhance disease prediction accuracy. This technology helps clinicians identify health risks earlier and develop more personalized treatment plans.
                 </p>
               </CardContent>
             </Card>
@@ -135,7 +143,7 @@ const Index = () => {
                 <div>
                   <p className="font-semibold text-foreground mb-2">AI never makes care decisions alone</p>
                   <p className="text-muted-foreground">
-                    Every AI recommendation is reviewed and validated by licensed healthcare professionals. Your doctor always has the final say in your treatment.
+                    Every AI recommendation from RAMP, IMPACT Pro, or CoMet is reviewed and validated by licensed healthcare professionals. RAMP was built from Day One with close collaboration between data scientists and clinicians to ensure transparency, accountability, and explainability. Your doctor always has the final say in your treatment.
                   </p>
                 </div>
               </div>
@@ -157,7 +165,7 @@ const Index = () => {
           <Card>
             <CardContent className="pt-6">
               <p className="text-foreground leading-relaxed mb-6">
-                Your privacy and data security are our top priorities. We use industry-leading safeguards to protect your information:
+                Your privacy and data security are our top priorities. UVA Health uses industry-leading safeguards across all AI systems:
               </p>
               
               <ul className="space-y-4">
@@ -165,28 +173,28 @@ const Index = () => {
                   <CheckCircle2 className="h-5 w-5 text-success flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold text-foreground">Data Encryption</p>
-                    <p className="text-muted-foreground">All patient data is encrypted both in transit and at rest using advanced security protocols.</p>
+                    <p className="text-muted-foreground">All patient data is encrypted both in transit and at rest. DAX Copilot uses HITRUST-certified Microsoft Azure cloud infrastructure with strict healthcare security standards.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-5 w-5 text-success flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold text-foreground">De-identification</p>
-                    <p className="text-muted-foreground">When possible, AI systems work with de-identified data that cannot be traced back to individual patients.</p>
+                    <p className="text-muted-foreground">When possible, AI systems like RAMP and CoMet work with de-identified data that cannot be traced back to individual patients.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-5 w-5 text-success flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-semibold text-foreground">Access Controls</p>
-                    <p className="text-muted-foreground">Only authorized healthcare personnel can access your medical records and AI analysis results.</p>
+                    <p className="font-semibold text-foreground">Access Controls & Data Retention</p>
+                    <p className="text-muted-foreground">Only authorized healthcare personnel can access your medical records and AI analysis results. DAX Copilot recordings are stored securely for one year, then automatically deleted.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-5 w-5 text-success flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold text-foreground">HIPAA Compliance</p>
-                    <p className="text-muted-foreground">All AI tools and data practices fully comply with federal HIPAA privacy regulations.</p>
+                    <p className="text-muted-foreground">All AI tools including RAMP, IMPACT Pro, DAX Copilot, and CoMet fully comply with federal HIPAA privacy regulations. Your data is never shared with third parties or used for commercial AI training without explicit consent.</p>
                   </div>
                 </li>
               </ul>
@@ -332,7 +340,7 @@ const Index = () => {
         <Card className="bg-primary/5 border-primary/20">
           <CardContent className="pt-6">
             <p className="text-sm text-muted-foreground text-center">
-              This page was last updated on March 2025. UVA Health is committed to transparency and will update this information as our use of AI evolves.
+              This page was last updated in November 2025. UVA Health uses RAMP (Real-Time Analytics Monitoring Platform), IMPACT Pro predictive monitoring, DAX Copilot for clinical documentation, and CoMet for disease prediction. We are committed to transparency and will update this information as our use of AI evolves.
             </p>
           </CardContent>
         </Card>
