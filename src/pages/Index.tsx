@@ -352,7 +352,9 @@ const Index = () => {
             <div className="p-3 rounded-lg bg-info text-info-foreground">
               <Brain className="h-7 w-7" />
             </div>
-            <h2 className="text-3xl font-bold text-foreground">Questions You Might Have</h2>
+            <h2 className="text-3xl font-bold text-foreground">Frequently Asked Questions
+
+          </h2>
           </div>
           
           <div className="space-y-3">
