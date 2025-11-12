@@ -10,23 +10,23 @@ const Index = () => {
   const faqs = [{
     id: "replace",
     question: "Does AI replace my doctor?",
-    answer: "No. AI tools like RAMP and DAX Copilot help your clinicians work more efficiently and accurately. Your doctor always reviews AI recommendations and makes the final decisions about your care. AI supports human expertise—it doesn't replace it."
+    answer: "No. AI helps your doctor, but your doctor is still in charge. AI gives ideas, and your doctor decides what's best for you."
   }, {
     id: "opt-out",
-    question: "Can I opt out of AI-based tools?",
-    answer: "Yes. For tools like DAX Copilot (AI note-taking), your provider will only use it if you're comfortable with it, and you can ask them to stop at any time. While some AI tools like RAMP are integrated into standard monitoring workflows to ensure patient safety, we respect your preferences and will discuss any concerns with you."
+    question: "Can I say no to AI tools?",
+    answer: "Yes. For tools like DAX Copilot (the note writer), your doctor will ask if it's okay. You can say no anytime. Other tools like RAMP help keep all patients safe."
   }, {
     id: "privacy",
-    question: "How is my privacy protected with DAX Copilot?",
-    answer: "DAX Copilot recordings are hosted on Microsoft Azure cloud, which is HITRUST certified for healthcare security. Recordings are stored securely for one year and then automatically deleted. UVA Health follows strict HIPAA regulations and your data is never shared with third parties without your explicit consent."
+    question: "Is my information safe?",
+    answer: "Yes. We keep your information locked and private. We follow special rules called HIPAA. We never share your information with other companies."
   }, {
     id: "know",
-    question: "What is RAMP and how does it work?",
-    answer: "RAMP (Real-Time Analytics Monitoring Platform) is UVA Health's custom-developed AI system that continuously analyzes patient data from EHRs and bedside monitors. It uses machine learning to detect early signs of clinical deterioration and alerts care teams in real-time, allowing for faster intervention and improved patient outcomes."
+    question: "What is RAMP?",
+    answer: "RAMP watches your health signs like heart rate and breathing. If something looks wrong, it tells your care team fast so they can help you."
   }, {
     id: "accuracy",
-    question: "How accurate is the AI?",
-    answer: "Our AI tools undergo rigorous testing and validation. RAMP was developed in-house by UVA Health's data science team with close collaboration from clinicians to ensure transparency, explainability, and accuracy. All AI systems are continuously monitored and all outputs are reviewed by licensed medical professionals."
+    question: "Does the AI work well?",
+    answer: "Yes. Doctors at UVA Health made RAMP and test it often to make sure it works right. Doctors always check what AI says before helping you."
   }];
   return <div className="min-h-screen bg-background font-sans">
       {/* Header */}
@@ -34,7 +34,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-4xl">
             <div className="flex items-start justify-between mb-2">
-              <h1 className="text-4xl font-bold">UVA Health AI Technologies: RAMP, IMPACT Pro & DAX Copilot</h1>
+              <h1 className="text-4xl font-bold">How UVA Health Uses AI to Help You</h1>
               <Button asChild className="bg-accent hover:bg-accent/90 text-white font-semibold px-6 shadow-lg">
                 <a href="https://mychart.uvahealth.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <div className="bg-white/20 p-1.5 rounded">
@@ -44,7 +44,7 @@ const Index = () => {
                 </a>
               </Button>
             </div>
-            <p className="text-lg opacity-90">Understanding how our AI systems support your care at UVA Health</p>
+            <p className="text-lg opacity-90">Learn how our computer tools help your doctors take care of you</p>
           </div>
         </div>
       </header>
@@ -53,12 +53,21 @@ const Index = () => {
       <main className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Intro Section */}
         <section className="mb-12">
-          <Card className="border-l-4 border-l-accent">
+          <Card className="border-l-4 border-l-accent bg-accent/5">
             <CardContent className="pt-6">
-              <p className="text-lg leading-relaxed text-foreground mb-4">
-                UVA Health uses advanced artificial intelligence (AI) technologies—including RAMP (Real-Time Analytics Monitoring Platform), IMPACT Pro predictive monitoring, DAX Copilot for clinical documentation, and CoMet for disease prediction—to help our clinicians provide faster, safer, and more personalized care. These AI tools enhance the expertise of our healthcare team and never replace human judgment or compassion.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">This page explains how we use AI at UVA Health, how we protect your information, and your rights as a patient. We believe in transparency and want you to feel informed and confident about the technology that supports your care.</p>
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-accent/10 flex-shrink-0">
+                  <Brain className="h-8 w-8 text-accent" />
+                </div>
+                <div>
+                  <p className="text-lg leading-relaxed text-foreground mb-4">
+                    UVA Health uses special computer programs to help our doctors and nurses take better care of you. These programs are called AI (Artificial Intelligence).
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    AI helps doctors spot problems early and spend more time with you. Your doctor always makes the final choices about your care—not the computer.
+                  </p>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </section>
@@ -66,84 +75,115 @@ const Index = () => {
         {/* How AI Is Used */}
         <section className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-2 rounded-lg bg-accent/10">
-              <Brain className="h-6 w-6 text-accent" />
+            <div className="p-3 rounded-lg bg-accent text-accent-foreground">
+              <Brain className="h-7 w-7" />
             </div>
-            <h2 className="text-3xl font-bold text-foreground">UVA Health's AI Technologies in Action</h2>
+            <h2 className="text-3xl font-bold text-foreground">How AI Helps You</h2>
           </div>
           
           <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <HeartPulse className="h-5 w-5 text-accent" />
-                  RAMP: Real-Time Monitoring
+            <Card className="border-l-4 border-l-accent">
+              <CardHeader className="bg-accent/5">
+                <CardTitle className="flex items-center gap-3">
+                  <div className="p-2 rounded-lg bg-accent text-accent-foreground">
+                    <HeartPulse className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <div className="text-xl">RAMP</div>
+                    <div className="text-sm font-normal text-muted-foreground">Watches Your Health 24/7</div>
+                  </div>
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-3">
-                  <strong>RAMP (Real-Time Analytics Monitoring Platform)</strong> is UVA Health's custom-developed AI system that continuously analyzes patient data from electronic health records and bedside monitors. Using advanced machine learning, RAMP provides actionable, explainable predictions that help care teams identify patients on the verge of clinical deterioration.
+              <CardContent className="pt-6">
+                <p className="text-foreground mb-3">
+                  RAMP watches your heart rate, breathing, and other health signs all day and night.
                 </p>
                 <p className="text-muted-foreground text-sm">
-                  RAMP integrates real-time vitals, EKG waveforms via Kafka streaming, and historical patient data to alert providers when immediate attention is needed, facilitating faster delivery of necessary care and improving patient outcomes.
+                  If something looks wrong, RAMP tells your care team right away so they can help you fast.
                 </p>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <HeartPulse className="h-5 w-5 text-accent" />
-                  IMPACT Pro: Cardiac Monitoring
+            <Card className="border-l-4 border-l-success">
+              <CardHeader className="bg-success/5">
+                <CardTitle className="flex items-center gap-3">
+                  <div className="p-2 rounded-lg bg-success text-success-foreground">
+                    <Heart className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <div className="text-xl">IMPACT Pro</div>
+                    <div className="text-sm font-normal text-muted-foreground">Heart Health Helper</div>
+                  </div>
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  <strong>IMPACT Pro</strong> (Predictive Monitoring: IMPact of Real-Time Predictive Monitoring in Acute Care Cardiology) uses AI-powered risk-prediction algorithms to identify cardiac patients at risk of deterioration. This technology enables faster intervention through enhanced data visualizations and early detection alerts to care teams.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <FileText className="h-5 w-5 text-accent" />
-                  DAX Copilot: AI Note-Taking
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-3">
-                  <strong>DAX Copilot</strong> uses ambient listening technology to securely record conversations between you and your provider during appointments. The AI then generates medical notes for your provider to review, giving them more time to focus on you instead of typing on a computer.
+              <CardContent className="pt-6">
+                <p className="text-foreground mb-3">
+                  IMPACT Pro helps doctors take care of patients with heart problems.
                 </p>
                 <p className="text-muted-foreground text-sm">
-                  Your provider will only use DAX Copilot if you're comfortable with it. You can see these notes in your MyChart after your visit. Recordings are stored securely on HITRUST-certified Microsoft Azure cloud and deleted after one year.
+                  It uses pictures and graphs to show doctors when a heart patient might need extra help.
                 </p>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Brain className="h-5 w-5 text-accent" />
-                  CoMet: Disease Prediction
+            <Card className="border-l-4 border-l-info">
+              <CardHeader className="bg-info/5">
+                <CardTitle className="flex items-center gap-3">
+                  <div className="p-2 rounded-lg bg-info text-info-foreground">
+                    <FileText className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <div className="text-xl">DAX Copilot</div>
+                    <div className="text-sm font-normal text-muted-foreground">Smart Note Writer</div>
+                  </div>
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  <strong>CoMet</strong> is an advanced deep learning model that combines patient proteomic data with electronic health records to enhance disease prediction accuracy. This technology helps clinicians identify health risks earlier and develop more personalized treatment plans.
+              <CardContent className="pt-6">
+                <p className="text-foreground mb-3">
+                  DAX Copilot listens to you and your doctor talk. Then it writes notes about your visit.
+                </p>
+                <p className="text-muted-foreground text-sm mb-3">
+                  This gives your doctor more time to look at you and talk to you instead of typing.
+                </p>
+                <p className="text-muted-foreground text-sm">
+                  Your doctor will ask if it's okay to use this tool. You can see the notes in MyChart.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-primary">
+              <CardHeader className="bg-primary/5">
+                <CardTitle className="flex items-center gap-3">
+                  <div className="p-2 rounded-lg bg-primary text-primary-foreground">
+                    <Brain className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <div className="text-xl">CoMet</div>
+                    <div className="text-sm font-normal text-muted-foreground">Finds Health Risks Early</div>
+                  </div>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="pt-6">
+                <p className="text-foreground mb-3">
+                  CoMet looks at your health information to find problems before they get big.
+                </p>
+                <p className="text-muted-foreground text-sm">
+                  This helps your doctor make a care plan that's just right for you.
                 </p>
               </CardContent>
             </Card>
           </div>
 
-          <Card className="bg-info/5 border-info/20">
+          <Card className="bg-info/10 border-info border-2">
             <CardContent className="pt-6">
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="h-6 w-6 text-info flex-shrink-0 mt-0.5" />
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-info text-info-foreground flex-shrink-0">
+                  <CheckCircle2 className="h-8 w-8" />
+                </div>
                 <div>
-                  <p className="font-semibold text-foreground mb-2">AI never makes care decisions alone</p>
-                  <p className="text-muted-foreground">
-                    Every AI recommendation from RAMP, IMPACT Pro, or CoMet is reviewed and validated by licensed healthcare professionals. RAMP was built from Day One with close collaboration between data scientists and clinicians to ensure transparency, accountability, and explainability. Your doctor always has the final say in your treatment.
+                  <p className="font-bold text-foreground mb-2 text-lg">Your Doctor Always Decides</p>
+                  <p className="text-foreground">
+                    AI gives ideas to your doctor, but your doctor always makes the final choice about your care.
                   </p>
                 </div>
               </div>
@@ -156,57 +196,54 @@ const Index = () => {
         {/* Data Protection */}
         <section className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-2 rounded-lg bg-success/10">
-              <Lock className="h-6 w-6 text-success" />
+            <div className="p-3 rounded-lg bg-success text-success-foreground">
+              <Lock className="h-7 w-7" />
             </div>
-            <h2 className="text-3xl font-bold text-foreground">How UVA Protects Your Data</h2>
+            <h2 className="text-3xl font-bold text-foreground">Keeping Your Information Safe</h2>
           </div>
 
-          <Card>
+          <Card className="border-2">
             <CardContent className="pt-6">
-              <p className="text-foreground leading-relaxed mb-6">
-                Your privacy and data security are our top priorities. UVA Health uses industry-leading safeguards across all AI systems:
-              </p>
-              
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-success flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">Data Encryption</p>
-                    <p className="text-muted-foreground">All patient data is encrypted both in transit and at rest. DAX Copilot uses HITRUST-certified Microsoft Azure cloud infrastructure with strict healthcare security standards.</p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="flex items-start gap-4 p-4 rounded-lg bg-success/5">
+                  <div className="p-2 rounded-lg bg-success text-success-foreground flex-shrink-0">
+                    <Shield className="h-6 w-6" />
                   </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-success flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-semibold text-foreground">De-identification</p>
-                    <p className="text-muted-foreground">When possible, AI systems like RAMP and CoMet work with de-identified data that cannot be traced back to individual patients.</p>
+                    <p className="font-bold text-foreground mb-2">Locked and Protected</p>
+                    <p className="text-muted-foreground text-sm">Your health information is locked up tight. Only your doctors and nurses can see it.</p>
                   </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-success flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">Access Controls & Data Retention</p>
-                    <p className="text-muted-foreground">Only authorized healthcare personnel can access your medical records and AI analysis results. DAX Copilot recordings are stored securely for one year, then automatically deleted.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-success flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">HIPAA Compliance</p>
-                    <p className="text-muted-foreground">All AI tools including RAMP, IMPACT Pro, DAX Copilot, and CoMet fully comply with federal HIPAA privacy regulations. Your data is never shared with third parties or used for commercial AI training without explicit consent.</p>
-                  </div>
-                </li>
-              </ul>
+                </div>
 
-              <div className="mt-6 pt-6 border-t">
-                <p className="text-sm text-muted-foreground">
-                  For more information, visit our{" "}
-                  <a href="#" className="text-accent hover:underline font-medium">
-                    Data Privacy Practices page
-                  </a>
-                  {" "}or contact our Privacy Office.
-                </p>
+                <div className="flex items-start gap-4 p-4 rounded-lg bg-success/5">
+                  <div className="p-2 rounded-lg bg-success text-success-foreground flex-shrink-0">
+                    <Eye className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-foreground mb-2">Private Information</p>
+                    <p className="text-muted-foreground text-sm">We keep your name and personal details private when using AI tools.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-4 rounded-lg bg-success/5">
+                  <div className="p-2 rounded-lg bg-success text-success-foreground flex-shrink-0">
+                    <Lock className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-foreground mb-2">Special Rules</p>
+                    <p className="text-muted-foreground text-sm">We follow strict laws called HIPAA to keep your health information safe.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-4 rounded-lg bg-success/5">
+                  <div className="p-2 rounded-lg bg-success text-success-foreground flex-shrink-0">
+                    <CheckCircle2 className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-foreground mb-2">We Never Share</p>
+                    <p className="text-muted-foreground text-sm">Your information stays with UVA Health. We don't give it to other companies.</p>
+                  </div>
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -217,40 +254,36 @@ const Index = () => {
         {/* Human Oversight */}
         <section className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-2 rounded-lg bg-primary/10">
-              <Users className="h-6 w-6 text-primary" />
+            <div className="p-3 rounded-lg bg-primary text-primary-foreground">
+              <Users className="h-7 w-7" />
             </div>
-            <h2 className="text-3xl font-bold text-foreground">AI Supports Medical Staff, Not Replaces Them</h2>
+            <h2 className="text-3xl font-bold text-foreground">AI Helps Your Care Team</h2>
           </div>
 
-          <Card>
+          <Card className="border-2">
             <CardContent className="pt-6">
-              <p className="text-foreground leading-relaxed mb-6">
-                At UVA Health, we believe technology should enhance—not replace—the human connection at the heart of healthcare. Here's how we ensure that:
-              </p>
-
               <div className="space-y-6">
-                <div className="flex gap-4">
-                  <Badge variant="secondary" className="h-8 w-8 rounded-full flex items-center justify-center flex-shrink-0">1</Badge>
+                <div className="flex gap-4 p-4 rounded-lg bg-primary/5">
+                  <div className="p-2 rounded-full bg-primary text-primary-foreground h-12 w-12 flex items-center justify-center flex-shrink-0 text-xl font-bold">1</div>
                   <div>
-                    <p className="font-semibold text-foreground mb-1">AI assists in letting providers decide</p>
-                    <p className="text-muted-foreground">AI offers insights and recommendations, but your doctor reviews all information and makes the final clinical decisions.</p>
+                    <p className="font-bold text-foreground mb-2">Doctors Make Choices</p>
+                    <p className="text-muted-foreground">AI gives ideas, but your doctor picks what's best for you.</p>
                   </div>
                 </div>
 
-                <div className="flex gap-4">
-                  <Badge variant="secondary" className="h-8 w-8 rounded-full flex items-center justify-center flex-shrink-0">2</Badge>
+                <div className="flex gap-4 p-4 rounded-lg bg-primary/5">
+                  <div className="p-2 rounded-full bg-primary text-primary-foreground h-12 w-12 flex items-center justify-center flex-shrink-0 text-xl font-bold">2</div>
                   <div>
-                    <p className="font-semibold text-foreground mb-1">AI always has continuous human oversight</p>
-                    <p className="text-muted-foreground">Medical experts regularly review AI performance to ensure accuracy, safety, and effectiveness.</p>
+                    <p className="font-bold text-foreground mb-2">Doctors Check Everything</p>
+                    <p className="text-muted-foreground">Doctors watch the AI to make sure it's working right and helping patients.</p>
                   </div>
                 </div>
 
-                <div className="flex gap-4">
-                  <Badge variant="secondary" className="h-8 w-8 rounded-full flex items-center justify-center flex-shrink-0">3</Badge>
+                <div className="flex gap-4 p-4 rounded-lg bg-primary/5">
+                  <div className="p-2 rounded-full bg-primary text-primary-foreground h-12 w-12 flex items-center justify-center flex-shrink-0 text-xl font-bold">3</div>
                   <div>
-                    <p className="font-semibold text-foreground mb-1">UVA priotitizes Patient-first care</p>
-                    <p className="text-muted-foreground">Your relationship with your care team remains personal, compassionate, and centered on your individual needs.</p>
+                    <p className="font-bold text-foreground mb-2">You Come First</p>
+                    <p className="text-muted-foreground">Your care team cares about you. AI just helps them do their job better.</p>
                   </div>
                 </div>
               </div>
@@ -263,47 +296,49 @@ const Index = () => {
         {/* Patient Rights */}
         <section className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-2 rounded-lg bg-accent/10">
-              <FileText className="h-6 w-6 text-accent" />
+            <div className="p-3 rounded-lg bg-accent text-accent-foreground">
+              <FileText className="h-7 w-7" />
             </div>
-            <h2 className="text-3xl font-bold text-foreground">Your Rights and Choices</h2>
+            <h2 className="text-3xl font-bold text-foreground">What You Can Do</h2>
           </div>
 
-          <Card>
+          <Card className="border-2">
             <CardContent className="pt-6">
-              <p className="text-foreground leading-relaxed mb-6">
-                As a patient at UVA Health, you have the right to:
-              </p>
+              <div className="grid md:grid-cols-2 gap-4 mb-6">
+                <div className="flex items-start gap-3 p-4 rounded-lg bg-accent/5">
+                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">Know when AI helped with your care</span>
+                </div>
+                <div className="flex items-start gap-3 p-4 rounded-lg bg-accent/5">
+                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">Ask questions about AI</span>
+                </div>
+                <div className="flex items-start gap-3 p-4 rounded-lg bg-accent/5">
+                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">Talk to your doctor about any worries</span>
+                </div>
+                <div className="flex items-start gap-3 p-4 rounded-lg bg-accent/5">
+                  <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">See your medical records anytime</span>
+                </div>
+              </div>
 
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground">Know when AI tools have been used in your care</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground">Request information about how AI contributed to clinical recommendations</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground">Discuss concerns about AI use with your healthcare provider</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground">Access your medical records, including AI-generated insights</span>
-                </li>
-              </ul>
-
-              <div className="bg-muted p-4 rounded-lg">
-                <p className="font-semibold text-foreground mb-2">Questions or Concerns?</p>
-                <p className="text-muted-foreground text-sm mb-3">
-                  We're here to help. Contact us through:
-                </p>
-                <ul className="text-sm space-y-1">
-                  <li className="text-foreground"><span className="font-medium">MyChart messaging:</span> Send a message to your care team</li>
-                  <li className="text-foreground"><span className="font-medium">HIPAA Compliance Office:</span> <a href="mailto:hipaa@uvahealth.org" className="text-accent hover:underline">hipaa@uvahealth.org</a></li>
-                  <li className="text-foreground"><span className="font-medium">Patient Relations:</span> <span className="text-accent">(434) 924-8315</span></li>
-                </ul>
+              <div className="bg-accent/10 p-6 rounded-lg border-2 border-accent/20">
+                <p className="font-bold text-foreground mb-3 text-lg">Need Help?</p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <Heart className="h-5 w-5 text-accent flex-shrink-0" />
+                    <span className="text-foreground"><span className="font-bold">MyChart:</span> Message your care team</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Shield className="h-5 w-5 text-accent flex-shrink-0" />
+                    <span className="text-foreground"><span className="font-bold">Email:</span> <a href="mailto:hipaa@uvahealth.org" className="text-accent hover:underline">hipaa@uvahealth.org</a></span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Users className="h-5 w-5 text-accent flex-shrink-0" />
+                    <span className="text-foreground"><span className="font-bold">Phone:</span> <span className="text-accent font-bold">(434) 924-8315</span></span>
+                  </div>
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -313,7 +348,12 @@ const Index = () => {
 
         {/* FAQ Section */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-6">Frequently Asked Questions</h2>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="p-3 rounded-lg bg-info text-info-foreground">
+              <Brain className="h-7 w-7" />
+            </div>
+            <h2 className="text-3xl font-bold text-foreground">Questions You Might Have</h2>
+          </div>
           
           <div className="space-y-3">
             {faqs.map(faq => <Card key={faq.id}>
@@ -337,11 +377,16 @@ const Index = () => {
         </section>
 
         {/* Footer Note */}
-        <Card className="bg-primary/5 border-primary/20">
+        <Card className="bg-primary/10 border-primary/20">
           <CardContent className="pt-6">
-            <p className="text-sm text-muted-foreground text-center">
-              This page was last updated in November 2025. UVA Health uses RAMP (Real-Time Analytics Monitoring Platform), IMPACT Pro predictive monitoring, DAX Copilot for clinical documentation, and CoMet for disease prediction. We are committed to transparency and will update this information as our use of AI evolves.
-            </p>
+            <div className="text-center">
+              <p className="text-foreground font-semibold mb-2">
+                We will keep this page up to date as we use new AI tools.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Last updated: November 2025
+              </p>
+            </div>
           </CardContent>
         </Card>
       </main>
