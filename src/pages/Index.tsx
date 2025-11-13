@@ -29,7 +29,7 @@ const Index = () => {
             <div className="flex items-start justify-between mb-2">
               <h1 className="text-4xl font-bold">UVA Health and Artificial Intelligence (AI)</h1>
               <Button asChild className="bg-accent hover:bg-accent/90 text-white font-semibold px-6 shadow-lg">
-                <a href="https://mychart.uvahealth.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <a href="https://mychart-ai-review.lovable.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <div className="bg-white/20 p-1.5 rounded">
                     <Heart className="h-4 w-4 fill-white" />
                   </div>
