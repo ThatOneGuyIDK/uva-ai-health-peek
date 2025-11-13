@@ -26,7 +26,7 @@ const Index = () => {
       <header className="bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-4xl">
-            <div className="flex items-start justify-between mb-2">
+            <div className="flex flex-col items-center justify-center mb-2 text-center gap-4">
               <h1 className="text-4xl font-bold">UVA Health and Artificial Intelligence (AI)</h1>
               <Button asChild className="bg-accent hover:bg-accent/90 text-white font-semibold px-6 shadow-lg">
                 <a href="https://mychart-ai-review.lovable.app" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
@@ -37,7 +37,7 @@ const Index = () => {
                 </a>
               </Button>
             </div>
-            <p className="text-lg opacity-90">Learn how Artificial Intelligence tools like IMPACT PRO help your doctors take care of you</p>
+            <p className="text-lg opacity-90 text-center">Learn how Artificial Intelligence tools like IMPACT PRO help your doctors take care of you</p>
           </div>
         </div>
       </header>
